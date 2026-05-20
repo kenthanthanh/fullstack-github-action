@@ -51,7 +51,7 @@ jobs:
             echo "${{ secrets.PAT_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
             # 2. Đi đến thư mục chứa file docker-compose.yml duy nhất trên VPS
-            cd /srv/production
+            cd /srv/fullstack-github-action
 
             # 3. Pull bản mới nhất (Docker sẽ chỉ pull những service có thay đổi)
             docker compose pull
